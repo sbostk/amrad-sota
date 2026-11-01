@@ -1,5 +1,6 @@
 TAG        := $(shell git describe --tags --long --abbrev=8)
-REGISTRY   := ghcr.io/sbostick
+# GHCR decommissioned 2026-11-01 (images moved to ECR); set REGISTRY to an ECR repo to push again.
+# REGISTRY   := ghcr.io/sbostick
 APP_NAME   := amrad-sota
 IMAGE      := ${REGISTRY}/${APP_NAME}:${TAG}
 BUILD_TIME := $(shell date "+%F %H:%M:%S %Z (%z)")
